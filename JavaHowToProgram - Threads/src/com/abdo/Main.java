@@ -11,6 +11,7 @@ public class Main {
         PrintTask task1 = new PrintTask("Task1");
         PrintTask task2 = new PrintTask("Task2");
         PrintTask task3 = new PrintTask("Task3");
+        PrintTask task4 = new PrintTask("Task4");
 
         System.out.println("Starting Execution");
 
@@ -22,6 +23,7 @@ public class Main {
         executorService.execute(task1);
         executorService.execute(task2);
         executorService.execute(task3);
+        executorService.execute(task4);
 
 
         // shut down ExecutorService -- it decided when to shut down
