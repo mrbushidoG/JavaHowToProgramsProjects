@@ -1,6 +1,5 @@
-package com.abdo;
-// Fig. 23.3: PrintTask.java
-// PrintTask class sleeps for a random time between 0 to 5 seconds
+package com.abdo;// Fig. 23.3: com.abdo.PrintTask.java
+// com.abdo.PrintTask class sleeps for a random time between 0 to 5 seconds
 
 import java.security.SecureRandom;
 
@@ -36,4 +35,4 @@ public class PrintTask implements Runnable {
 
     } // end of run method
 
-}// end of PrintTask class
+}// end of com.abdo.PrintTask class
