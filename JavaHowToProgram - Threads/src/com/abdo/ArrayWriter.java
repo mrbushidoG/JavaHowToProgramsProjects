@@ -11,7 +11,7 @@ public class ArrayWriter implements Runnable {
     }
     
     public void run() {
-        for (int i = 0; i < startValue + 3; i++) {
+        for (int i = startValue; i < startValue + 3; i++) {
             sharedSimpleArray.add(i);
         }
     }

@@ -13,12 +13,13 @@ public class SimpleArray {
         this.array = new int[size];
     }
 
-    public void add(int value) {
+    public synchronized void add(int value) {
+
         int position = writeIndex;
 
         try {
             // put thread to sleep for 0-499 miliseconds
-            Thread.sleep(generator.nextInt(50));
+            Thread.sleep(generator.nextInt(500));
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -28,14 +29,14 @@ public class SimpleArray {
         // put value in appropriated index
         array[position] = value;
         System.out.printf("%s wrote %2d to element %d.%n",
-                Thread.currentThread().getName(),value,position);
+                Thread.currentThread().getName(), value, position);
 
         ++writeIndex;
-        System.out.printf("Next write index: %d%n",writeIndex);
+        System.out.printf("Next write index: %d%n", writeIndex);
     }// end of add method
 
     @Override
-    public String toString() {
+    public synchronized String toString() {
         return Arrays.toString(array);
     }
 }
